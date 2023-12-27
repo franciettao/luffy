@@ -1,0 +1,16 @@
+// Dans votre fichier server.js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Route pour interagir avec l'application Android
+app.post('/api/android', (req, res) => {
+    // Logique de gestion pour l'interaction avec Android
+    res.json({ message: 'Interaction avec Android réussie' });
+});
+
+// Autres routes et logique pour le serveur
+
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});
