@@ -1,0 +1,29 @@
+Pour générer le script `npm run deploy` dans votre fichier `package.json`, vous devez définir le script et spécifier la commande qui sera exécutée lors du déploiement. Voici un exemple basique :
+
+1. Ouvrez votre fichier `package.json`.
+
+2. Ajoutez une section `"scripts"` si elle n'existe pas encore, puis ajoutez le script `deploy`.
+
+3. Dans le script `deploy`, vous pouvez spécifier la commande que vous souhaitez exécuter pour le déploiement. Dans cet exemple, j'utiliserai une commande fictive `deploy-command`. Vous devrez remplacer cela par la commande réelle que vous utilisez pour déployer votre application.
+
+Voici à quoi cela pourrait ressembler :
+
+```json
+{
+  "name": "votre-projet",
+  "version": "1.0.0",
+  "description": "Description de votre projet",
+  "scripts": {
+    "start": "node server.js", // Exemple de script pour démarrer le serveur
+    "test": "echo \"Error: no test specified\" && exit 1", // Exemple de script pour les tests
+    "deploy": "deploy-command" // Commande de déploiement réelle
+  },
+  "dependencies": {
+    "express": "^4.17.1" // Exemple de dépendance (assurez-vous de lister les dépendances réelles de votre projet)
+  }
+}
+```
+
+Dans cet exemple, lorsque vous exécutez `npm run deploy`, la commande `deploy-command` sera exécutée. Assurez-vous de remplacer `deploy-command` par la commande réelle que vous utilisez pour déployer votre application sur le serveur en production.
+
+N'oubliez pas d'ajouter toutes les autres dépendances nécessaires à votre fichier `package.json` et d'adapter la configuration en fonction de votre projet.
