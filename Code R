@@ -1,0 +1,11 @@
+// Dans votre fichier server.js
+const { PythonShell } = require('python-shell');
+
+PythonShell.runString(`
+    # Exemple de code R
+    result <- mean(c(1, 2, 3, 4, 5))
+    print(result)
+`, null, (err, results) => {
+    if (err) throw err;
+    console.log('Résultats du code R :', results);
+});
