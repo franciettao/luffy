@@ -1,0 +1,11 @@
+// Dans votre fichier server.js
+const { exec } = require('child_process');
+
+// Exemple d'exécution de script Python
+exec('python3 script_python.py', (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Erreur d'exécution : ${error}`);
+        return;
+    }
+    console.log(`Sortie du script Python : ${stdout}`);
+});
